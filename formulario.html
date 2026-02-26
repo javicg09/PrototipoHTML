@@ -1,23 +1,32 @@
 <h1>
 	Formulario de contacto
 </h1>
+
 <form>
 	<fieldset >
 		<leyend>
-			Nombre 
-			<input type="string">
+			Nombre Completo 
+			<input type="string" placeholder="Tu nombre" required>
 		</leyend>
 	</fieldset>
+
 	<fieldset>
 		<leyend>
 			Correo Electronico
-			<input type="email">
+			<input type="email" placeholder="ejemplo@correo.com" required>
 		</leyend>
 	</fieldset>
+
 	<fieldset>
 		Telefono de contacto
-		<input type="tel">
+		<input type="tel" placeholder="123 456 789" required>
 	</fieldset>
+	
+	<fieldset>
+		Mensaje 
+    	<textarea name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
+	</fieldset>
+
 	<button>
 		Enviar Formulario
 	</button>

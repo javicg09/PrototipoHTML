@@ -1,0 +1,55 @@
+<h1> Gestión de Reservas</h1>
+
+<h2>Crear una nueva reserva</h2>
+<form>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <input type="text" name="nombre" placeholder="Nombre completo" required><br><br>
+        <input type="email" name="email" placeholder="Correo electrónico" required><br><br>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos del traslado</legend>
+        <label>Origen:</label>
+        <select name="origen" required>
+            <option value="">Selecciona aeropuerto</option>
+            <option value="sur">Aeropuerto Tenerife Sur</option>
+            <option value="norte">Aeropuerto Tenerife Norte</option>
+        </select><br><br>
+
+        <label>Destino:</label>
+        <select name="destino" required>
+            <option value="">Selecciona destino</option>
+            <option value="los_cristianos">Los Cristianos</option>
+            <option value="costa_adeje">Costa Adeje</option>
+            <option value="puerto_de_la_cruz">Puerto de la Cruz</option>
+            <option value="santa_cruz">Santa Cruz de Tenerife</option>
+            <option value="la_laguna">San Cristóbal de La Laguna</option>
+            <option value="los_gigantes">Los Gigantes</option>
+            <option value="el_medano">El Médano</option>
+            <option value="la_orotava">La Orotava</option>
+        </select><br><br>
+
+        <label>Nº de pasajeros:</label>
+        <input type="number" name="pasajeros" min="1" max="8" required><br><br>
+
+        <label>Fecha y hora:</label>
+        <input type="datetime-local" name="fecha" required>
+    </fieldset>
+
+    <button type="submit">Crear nueva reserva</button>
+</form>
+
+<h2>Consultar reserva existente</h2>
+<form>
+    <fieldset>
+        <legend>Código de reserva</legend>
+        <input type="text" name="codigo" placeholder="Introduce tu código" required>
+    </fieldset>
+    <fieldset>
+        <legend>Correo electrónico</legend>
+        <input type="email" name="email" placeholder="Introduce tu email" required>
+    </fieldset>
+    <button type="submit">Consultar reserva</button>
+</form>
