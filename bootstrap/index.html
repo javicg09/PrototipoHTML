@@ -196,11 +196,22 @@
                     </tbody>
                 </table>
 
-                <!-- COMPONENTE 11:  callout -->
-                <div class="callout">
-                    Nuestras tarifas son orientativas y pueden variar en función de factores como el horario, 
-                    el número de pasajeros o los suplementos aplicables según la normativa vigente.
+                <button class="btn btn-info mb-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                    Ver información sobre tarifas
+                </button>
+
+                <!-- COMPONENTE 11: offcanvas -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">Importante</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        Nuestras tarifas son orientativas y pueden variar en función de factores como el horario, 
+                        el número de pasajeros o los suplementos aplicables según la normativa vigente.
+                    </div>
                 </div>
+                
             </div>
         </div>
 
