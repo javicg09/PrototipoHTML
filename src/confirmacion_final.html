@@ -65,8 +65,35 @@
                         <p class="fs-5 mb-4">
                             <i class="bi bi-tag-fill text-primary me-2"></i>
                             <strong>Código de Seguimiento:</strong>
-                            <span class="badge bg-dark ms-2 fs-6">TX-2026-9934</span>
+                            <span id="badge-codigo" class="badge bg-dark ms-2 fs-6">TX-????</span>
                         </p>
+
+                        <div id="resumen-reserva" class="d-none mb-4">
+                            <h6 class="fw-bold text-muted text-uppercase border-bottom pb-2 mb-3">Resumen de tu reserva</h6>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Nombre</span><span id="conf-nombre">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Aeropuerto</span><span id="conf-origen">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Destino</span><span id="conf-destino">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Pasajeros</span><span id="conf-pasajeros">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Fecha y hora</span><span id="conf-fecha">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between fw-bold">
+                                    <span>Total pagado</span><span id="conf-precio">-</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Método de pago</span><span id="conf-pago">-</span>
+                                </li>
+                            </ul>
+                        </div>
 
                         <h6 class="fw-bold text-muted text-uppercase border-bottom pb-2 mb-3">Próximos pasos</h6>
                         <ul class="list-group list-group-flush">
@@ -109,5 +136,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/reservas.js"></script>
+    <script src="./js/confirmacion.js"></script>
 </body>
 </html>

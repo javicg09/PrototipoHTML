@@ -57,16 +57,24 @@
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between">
-                                <span>Tarifa Base</span>
-                                <span>5.50 €</span>
+                                <span>Aeropuerto de origen</span>
+                                <span id="res-origen">-</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
-                                <span>Suplemento Aeropuerto</span>
-                                <span>3.00 €</span>
+                                <span>Destino</span>
+                                <span id="res-destino">-</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Pasajeros</span>
+                                <span id="res-pasajeros">-</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Fecha y hora</span>
+                                <span id="res-fecha">-</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between fw-bold">
                                 <span>Total a pagar</span>
-                                <span>28.50 €</span>
+                                <span id="res-precio">-</span>
                             </li>
                         </ul>
                     </div>
@@ -82,9 +90,9 @@
                             </div>
                             <div class="card-body">
                                 <p class="text-muted">Pagarás directamente al taxista al finalizar el trayecto.</p>
-                                <form action="confirmacion_final.html">
-                                    <button type="submit" class="btn btn-dark w-100"><i class="bi bi-check-circle me-2"></i>Confirmar y pagar al conductor</button>
-                                </form>
+                                <button id="btn-efectivo" type="button" class="btn btn-dark w-100">
+                                    <i class="bi bi-check-circle me-2"></i>Confirmar y pagar al conductor
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -95,19 +103,19 @@
                                 <i class="bi bi-credit-card-fill me-2"></i>Tarjeta de Crédito
                             </div>
                             <div class="card-body">
-                                <form action="confirmacion_final.html">
+                                <form id="form-tarjeta">
                                     <div class="mb-3">
                                         <label class="form-label fw-semibold">Número de tarjeta</label>
-                                        <input type="text" class="form-control" placeholder="0000 0000 0000 0000" required>
+                                        <input id="num-tarjeta" type="text" class="form-control" placeholder="0000 0000 0000 0000" required>
                                     </div>
                                     <div class="row g-2 mb-3">
                                         <div class="col-7">
                                             <label class="form-label fw-semibold">Fecha de expiración</label>
-                                            <input type="month" class="form-control" required>
+                                            <input id="expiracion" type="month" class="form-control" required>
                                         </div>
                                         <div class="col-5">
                                             <label class="form-label fw-semibold">CVV</label>
-                                            <input type="password" class="form-control" placeholder="123" maxlength="3" required>
+                                            <input id="cvv" type="password" class="form-control" placeholder="123" maxlength="3" required>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-dark w-100"><i class="bi bi-lock-fill me-2"></i>Pagar ahora con Tarjeta</button>
@@ -139,5 +147,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/reservas.js"></script>
+    <script src="./js/pagos.js"></script>
 </body>
 </html>

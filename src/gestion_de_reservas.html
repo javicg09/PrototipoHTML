@@ -65,6 +65,7 @@
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">Correo electrónico</label>
                                 <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                                <div id="email-error" class="text-danger small d-none">Introduce un correo válido: ejemplo@dominio.com</div>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label fw-semibold">Teléfono</label>
@@ -74,16 +75,16 @@
                             <h6 class="fw-bold text-uppercase text-muted border-bottom pb-2 mb-3">Datos del traslado</h6>
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">Aeropuerto de origen</label>
-                                <select class="form-select" name="aeropuerto">
-                                    <option selected>Seleccionar aeropuerto origen</option>
+                                <select class="form-select" name="aeropuerto" required>
+                                    <option value="" selected>Seleccionar aeropuerto origen</option>
                                     <option value="1">Aeropuerto Tenerife Norte</option>
                                     <option value="2">Aeropuerto Tenerife Sur</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">Destino</label>
-                                <select class="form-select" name="destino">
-                                    <option selected>Seleccionar Destino</option>
+                                <select class="form-select" name="destino" required>
+                                    <option value="" selected>Seleccionar Destino</option>
                                     <option value="los_cristianos">Los Cristianos</option>
                                     <option value="costa_adeje">Costa Adeje</option>
                                     <option value="puerto_de_la_cruz">Puerto de la Cruz</option>
@@ -103,6 +104,16 @@
                                     <label class="form-label fw-semibold">Fecha y hora</label>
                                     <input type="datetime-local" name="fecha" class="form-control" required>
                                 </div>
+                            </div>
+
+                            <div id="precio-estimado" class="alert alert-info d-none mb-3">
+                                <i class="bi bi-tag-fill me-2"></i>
+                                <strong>Precio estimado:</strong> <span id="precio-valor">-</span>
+                            </div>
+
+                            <div id="precio-estimado" class="alert alert-info d-none mb-3">
+                                <i class="bi bi-tag-fill me-2"></i>
+                                <strong>Precio estimado:</strong> <span id="precio-valor">-</span>
                             </div>
 
                             <div class="d-flex gap-2">
@@ -131,5 +142,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/reservas.js"></script>
+    <script src="./js/gestion_reservas.js"></script>
 </body>
 </html>
