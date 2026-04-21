@@ -66,6 +66,16 @@ function cancelarReserva(codigo) {
   localStorage.setItem("reservas", JSON.stringify(reservas));
 }
 
+function editarReserva(codigo, nuevoDestino, nuevaFecha) {
+  let reservas = JSON.parse(localStorage.getItem("reservas") || "[]");
+  reservas = reservas.map(r => {
+    if (r.codigo !== codigo) return r;
+    const nuevoPrecio = calcularPrecio(r.aeropuerto, nuevoDestino, r.pasajeros);
+    return { ...r, destino: nuevoDestino, fecha: nuevaFecha, precio: nuevoPrecio };
+  });
+  localStorage.setItem("reservas", JSON.stringify(reservas));
+}
+
 function formatearFecha(fechaStr) {
   if (!fechaStr) return "-";
   const d = new Date(fechaStr);
