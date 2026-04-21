@@ -56,6 +56,12 @@
                 <i class="bi bi-taxi-front-fill me-2" aria-hidden="true"></i>¡Reserva ya!
             </a>
 
+            <div id="banner-borrador" class="d-none mt-2">
+                <a href="./gestion_de_reservas.html" class="btn btn-sm btn-outline-dark">
+                    <i class="bi bi-floppy-fill me-1" aria-hidden="true"></i>Continuar reserva guardada
+                </a>
+            </div>
+
             <div class="mt-5">
                 <h3 class="mb-3 border-bottom pb-2">Destinos Destacados</h3>
                 <div class="row">
@@ -202,6 +208,11 @@
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem('borrador_reserva')) {
+        document.getElementById('banner-borrador').classList.remove('d-none');
+    }
+</script>
 <script>
     // Validación y envío del formulario
     const form = document.getElementById('commentForm');
