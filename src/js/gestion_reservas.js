@@ -46,10 +46,10 @@ document.getElementById('btn-borrador').addEventListener('click', function() {
     localStorage.setItem('borrador_reserva', JSON.stringify(datos));
 
     const btn = this;
-    btn.innerHTML = '<i class="bi bi-check-lg me-1"></i>Borrador guardado';
+    btn.innerHTML = '<i class="bi bi-check-lg me-1"></i>Guardado';
     btn.disabled = true;
     setTimeout(() => {
-        btn.innerHTML = '<i class="bi bi-floppy-fill me-1"></i>Guardar borrador';
+        btn.innerHTML = '<i class="bi bi-floppy-fill me-1"></i>Guardar y continuar más tarde';
         btn.disabled = false;
     }, 2000);
 });
